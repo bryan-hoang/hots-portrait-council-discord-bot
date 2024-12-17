@@ -1,0 +1,34 @@
+{
+	"name": "hots-portrait-council-discord-bot",
+	"type": "commonjs",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"check": "biome check",
+		"dev": "pnpm run build && pnpm run start",
+		"generate": "sapphire generate",
+		"sapphire": "sapphire",
+		"start": "node dist/index.js",
+		"watch": "tsc -w",
+		"watch:start": "tsc-watch --onSuccess \"npm run start\""
+	},
+	"dependencies": {
+		"@sapphire/decorators": "^6.1.1",
+		"@sapphire/discord.js-utilities": "7.3.1",
+		"@sapphire/framework": "^5.3.0",
+		"@sapphire/plugin-logger": "^4.0.2",
+		"@sapphire/utilities": "^3.18.0",
+		"@skyra/env-utilities": "^1.3.0",
+		"colorette": "^2.0.20",
+		"discord.js": "^14.16.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@sapphire/cli": "^1.9.3",
+		"@sapphire/ts-config": "^5.0.1",
+		"@types/node": "^20.17.5",
+		"@types/ws": "^8.5.13",
+		"tsc-watch": "^6.2.0",
+		"typescript": "~5.4.5"
+	}
+}
