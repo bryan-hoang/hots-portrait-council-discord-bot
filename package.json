@@ -3,14 +3,14 @@
 	"type": "commonjs",
 	"main": "dist/index.js",
 	"scripts": {
-		"build": "tsc",
+		"build": "unbuild",
 		"check": "biome check",
 		"dev": "pnpm run build && pnpm run start",
 		"generate": "sapphire generate",
 		"sapphire": "sapphire",
 		"start": "node dist/index.js",
 		"watch": "tsc -w",
-		"watch:start": "tsc-watch --onSuccess \"npm run start\""
+		"watch:start": "tsc-watch --onSuccess \"pnpm run start\""
 	},
 	"dependencies": {
 		"@sapphire/decorators": "^6.1.1",
@@ -29,6 +29,7 @@
 		"@types/node": "^20.17.5",
 		"@types/ws": "^8.5.13",
 		"tsc-watch": "^6.2.0",
-		"typescript": "~5.4.5"
+		"typescript": "~5.4.5",
+		"unbuild": "3.0.1"
 	}
 }
