@@ -2,12 +2,19 @@
 	"extends": [
 		"@sapphire/ts-config",
 		"@sapphire/ts-config/extra-strict",
-		"@sapphire/ts-config/decorators"
+		"@sapphire/ts-config/decorators",
+		"@tsconfig/strictest",
+		"@total-typescript/tsconfig/tsc/no-dom/app"
 	],
 	"compilerOptions": {
 		"rootDir": "src",
 		"outDir": "dist",
-		"tsBuildInfoFile": "dist/.tsbuildinfo"
+		"tsBuildInfoFile": "dist/.tsbuildinfo",
+
+		// "module": "Node16",
+		// "moduleResolution": "bundler",
+		"verbatimModuleSyntax": false,
+		"noPropertyAccessFromIndexSignature": false,
 	},
 	"include": ["src"]
 }

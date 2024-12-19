@@ -6,8 +6,8 @@ export default defineBuildConfig({
 			builder: 'mkdist',
 			input: './src',
 			outDir: './dist',
-			format: 'cjs',
-			ext: 'js',
+			// format: 'cjs',
+			// ext: 'js',
 			esbuild: {
 				tsconfigRaw: {
 					compilerOptions: {

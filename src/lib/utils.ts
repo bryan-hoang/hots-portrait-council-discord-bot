@@ -5,7 +5,7 @@ import {
 	type MessageCommandSuccessPayload,
 	container,
 } from '@sapphire/framework';
-import { cyan } from 'colorette';
+import { colors } from 'consola/utils';
 import type { APIUser, Guild, User } from 'discord.js';
 
 export function logSuccessCommand(
@@ -49,18 +49,18 @@ export function getSuccessLoggerData(
 }
 
 function getShardInfo(id: number) {
-	return `[${cyan(id.toString())}]`;
+	return `[${colors.cyan(id.toString())}]`;
 }
 
 function getCommandInfo(command: Command) {
-	return cyan(command.name);
+	return colors.cyan(command.name);
 }
 
 function getAuthorInfo(author: User | APIUser) {
-	return `${author.username}[${cyan(author.id)}]`;
+	return `${author.username}[${colors.cyan(author.id)}]`;
 }
 
 function getGuildInfo(guild: Guild | null) {
 	if (guild === null) return 'Direct Messages';
-	return `${guild.name}[${cyan(guild.id)}]`;
+	return `${guild.name}[${colors.cyan(guild.id)}]`;
 }
