@@ -21,6 +21,7 @@
 		"@sapphire/pieces": "4.3.1",
 		"@sapphire/plugin-logger": "^4.0.2",
 		"consola": "3.3.0",
+		"cron": "3.3.1",
 		"discord.js": "^14.16.3",
 		"mlly": "1.7.3",
 		"std-env": "3.8.0",
