@@ -1,36 +1,42 @@
 {
 	"name": "hots-portrait-council-discord-bot",
-	"type": "commonjs",
+	"type": "module",
 	"main": "dist/index.js",
 	"scripts": {
-		"build": "unbuild",
+		"build": "tsc",
 		"check": "biome check",
+		"check:knip": "knip",
+		"check:types": "tsc --noEmit",
 		"dev": "pnpm run build && pnpm run start",
 		"generate": "sapphire generate",
+		"prepare": "husky",
 		"sapphire": "sapphire",
-		"start": "node dist/index.js",
+		"start": "node --enable-source-maps dist/index.js",
 		"watch": "tsc -w",
 		"watch:start": "tsc-watch --onSuccess \"pnpm run start\""
 	},
 	"dependencies": {
 		"@sapphire/decorators": "^6.1.1",
-		"@sapphire/discord.js-utilities": "7.3.1",
 		"@sapphire/framework": "^5.3.1",
+		"@sapphire/pieces": "4.3.1",
 		"@sapphire/plugin-logger": "^4.0.2",
-		"@sapphire/utilities": "^3.18.1",
 		"@skyra/env-utilities": "^1.3.0",
-		"colorette": "^2.0.20",
-		"discord.js": "^14.16.3"
+		"consola": "3.3.0",
+		"discord.js": "^14.16.3",
+		"mlly": "1.7.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@sapphire/cli": "^1.9.3",
 		"@sapphire/ts-config": "^5.0.1",
+		"@total-typescript/tsconfig": "1.0.4",
+		"@tsconfig/strictest": "2.0.5",
 		"@types/node": "^22.10.2",
-		"@types/ws": "^8.5.13",
+		"husky": "9.1.7",
+		"knip": "5.41.1",
+		"lint-staged": "15.2.11",
 		"tsc-watch": "^6.2.1",
-		"typescript": "~5.7.2",
-		"unbuild": "3.0.1"
+		"typescript": "~5.7.2"
 	},
-	"packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
+	"packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
 }

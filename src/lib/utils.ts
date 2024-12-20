@@ -5,8 +5,10 @@ import {
 	type MessageCommandSuccessPayload,
 	container,
 } from '@sapphire/framework';
-import { cyan } from 'colorette';
+import { colors } from 'consola/utils';
 import type { APIUser, Guild, User } from 'discord.js';
+
+const { cyan } = colors;
 
 export function logSuccessCommand(
 	payload:

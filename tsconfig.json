@@ -2,11 +2,16 @@
 	"extends": [
 		"@sapphire/ts-config",
 		"@sapphire/ts-config/extra-strict",
-		"@sapphire/ts-config/decorators"
+		"@sapphire/ts-config/decorators",
+		"@tsconfig/strictest",
+		"@total-typescript/tsconfig/tsc/no-dom/app"
 	],
 	"compilerOptions": {
-		"rootDir": "src",
+		"declaration": false,
+		"declarationMap": false,
+		"noPropertyAccessFromIndexSignature": false,
 		"outDir": "dist",
+		"rootDir": "src",
 		"tsBuildInfoFile": "dist/.tsbuildinfo"
 	},
 	"include": ["src"]
