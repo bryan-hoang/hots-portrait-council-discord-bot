@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        # See supported Node.js release schedule at
+        # https://nodejs.org/en/about/releases/
         node-version: [lts/*, latest]
     steps:
       - uses: actions/checkout@v4
