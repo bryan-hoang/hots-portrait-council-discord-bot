@@ -1,7 +1,7 @@
 import './lib/setup.js';
-
 import { LogLevel, SapphireClient } from '@sapphire/framework';
 import { GatewayIntentBits } from 'discord.js';
+import { env } from './lib/env.js';
 
 const client = new SapphireClient({
 	defaultPrefix: '!',
@@ -21,7 +21,7 @@ const client = new SapphireClient({
 const main = async () => {
 	try {
 		client.logger.info('Logging in');
-		await client.login(process.env.DISCORD_BOT_TOKEN);
+		await client.login(env.DISCORD_BOT_TOKEN);
 		client.logger.info('logged in');
 	} catch (error) {
 		client.logger.fatal(error);
