@@ -10,7 +10,7 @@ import {
 @ApplyOptions<Command.Options>({
 	description: 'ping pong',
 })
-export class UserCommand extends Command {
+export class PingCommand extends Command {
 	// Register Chat Input and Context Menu command
 	public override registerApplicationCommands(registry: Command.Registry) {
 		// Create shared integration types and contexts

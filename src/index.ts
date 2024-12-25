@@ -16,6 +16,11 @@ const client = new SapphireClient({
 		GatewayIntentBits.MessageContent,
 	],
 	loadMessageCommandListeners: true,
+	tasks: {
+		bull: {
+			connection: {},
+		},
+	},
 });
 
 const main = async () => {
